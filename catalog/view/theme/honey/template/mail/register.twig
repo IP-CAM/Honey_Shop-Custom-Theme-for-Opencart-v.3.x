@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{ title }}</title>
+    <style>
+        p{
+            font-size:1em;
+            color: #660000;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;color: #660000;">
+<h1>{{ text_welcome }}</h1>
+
+{% if not approval %}
+<p style="color: #d99447">{{ text_login }}: <strrong> {{ login }}</strrong></p>
+<p style="color: #d99447">{{ text_service }}</p>
+<p style="color: #d99447">{{ text_thanks }}</p>
+<p style="color: #d99447">{{ store }}</p>
+{% else %}
+<p style="color: #d99447">{{ text_approval }}: <strrong> {{ login }}</strrong></p>
+<p style="color: #d99447">{{ text_thanks }}</p>
+<p style="color: #d99447">{{ store }}</p>
+{% endif %}
+</body>
+</html>
